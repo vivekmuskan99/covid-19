@@ -1,0 +1,44 @@
+<!-- views/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>COVID-19 Data</title> 
+</head>
+
+<body>
+
+  <h1>COVID-19 Data</h1>
+
+  <table border="1">
+    <tr>
+      <th>State Name</th>
+      <th>Date of Record</th>
+      <th>No. of Samples</th>
+      <th>No. of Deaths</th> 
+      <th>No. of Positive Cases</th>
+      <th>No. of Negative Cases</th>
+      <th>No. of Discharges</th>
+    </tr>
+    
+    <% data.forEach(row => { %>
+      <tr>
+        <td><%= row.State_Name %></td>
+        <td><%= row.Date_of_Record %></td> 
+        <td><%= row.No_of_Samples %></td>
+        <td><%= row.No_of_Deaths %></td>
+        <td><%= row.No_of_Positive %></td>
+        <td><%= row.No_of_Negative %></td> 
+        <td><%= row.No_of_Discharge %></td>
+      </tr>
+    <% }); %>
+  
+  </table>
+
+  <a href="/insert">
+    <button>Insert Data</button>  
+  </a>
+
+</body>
+</html>

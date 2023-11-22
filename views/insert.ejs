@@ -1,0 +1,74 @@
+<!-- views/insert.ejs -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insert COVID Data</title>
+  <style>
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;  
+      border: 1px solid #ddd;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold; 
+    }
+    
+    input[type="text"],
+    input[type="date"],
+    input[type="number"] {
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    
+    button[type="submit"] {
+      background: #4caf50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px; 
+      font-size: 16px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Insert COVID Data</h1>
+  
+  <form method="POST" action="/insert">
+
+    <label>State Name:</label>
+    <input type="text" name="State_Name">
+    
+    <label>Date of Record:</label>
+    <input type="date" name="Date_of_Record">
+
+    <label>No. of Samples:</label>   
+    <input type="number" name="No_of_Samples">
+    
+    <label>No. of Deaths:</label>
+    <input type="number" name="No_of_Deaths">
+
+    <label>No. of Positive Cases:</label>
+    <input type="number" name="No_of_Positive">
+    
+    <label>No. of Negative Cases:</label>
+    <input type="number" name="No_of_Negative">
+
+    <label>No. of Discharges:</label>
+    <input type="number" name="No_of_Discharge">
+
+    <button type="submit">Submit</button>
+
+  </form>
+
+</body>
+</html>
