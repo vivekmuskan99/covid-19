@@ -11,9 +11,9 @@ app.set('view engine', 'ejs');
 
 // MySQL database connection setup
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'password',
+  host: 'database-1.ctvd6rukxcqt.us-east-1.rds.amazonaws.com',
+  user: 'admin',
+  password: '7895123abc',
   database: 'Covid19',
 });
 
